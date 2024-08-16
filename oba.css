@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.form, .dashboard {
+    display: none;
+    margin-top: 20px;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#main-menu button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Banking System</h1>
+        <div id="main-menu">
+            <button onclick="showRegisterForm()">Register</button>
+            <button onclick="showLoginForm()">Login</button>
+        </div>
+        
+        <div id="register-form" class="form">
+            <h2>Register</h2>
+            <input type="text" id="reg-name" placeholder="Name">
+            <input type="text" id="reg-address" placeholder="Address">
+            <input type="text" id="reg-contact" placeholder="Contact Info">
+            <input type="number" id="reg-deposit" placeholder="Initial Deposit">
+            <input type="password" id="reg-password" placeholder="Password">
+            <button onclick="registerUser()">Register</button>
+        </div>
+
+        <div id="login-form" class="form">
+            <h2>Login</h2>
+            <input type="text" id="login-account" placeholder="Account Number">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="loginUser()">Login</button>
+        </div>
+
+        <div id="user-dashboard" class="dashboard">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <p>Account Number: <span id="user-account-number"></span></p>
+            <p>Balance: $<span id="user-balance"></span></p>
+            <button onclick="showDepositForm()">Deposit</button>
+            <button onclick="showWithdrawForm()">Withdraw</button>
+            <button onclick="showTransferForm()">Transfer Funds</button>
+            <button onclick="viewAccountStatement()">View Account Statement</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="deposit-form" class="form">
+            <h2>Deposit</h2>
+            <input type="number" id="deposit-amount" placeholder="Amount">
+            <button onclick="deposit()">Deposit</button>
+        </div>
+
+        <div id="withdraw-form" class="form">
+            <h2>Withdraw</h2>
+            <input type="number" id="withdraw-amount" placeholder="Amount">
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+
+        <div id="transfer-form" class="form">
+            <h2>Transfer Funds</h2>
+            <input type="text" id="transfer-recipient" placeholder="Recipient Account Number">
+            <input type="number" id="transfer-amount" placeholder="Amount">
+            <button onclick="transferFunds()">Transfer</button>
+        </div>
+
+        <div id="account-statement" class="dashboard">
+            <h2>Account Statement</h2>
+            <div id="statement"></div>
+            <button onclick="backToDashboard()">Back</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
